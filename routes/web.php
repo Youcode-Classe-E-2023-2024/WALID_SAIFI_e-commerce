@@ -19,4 +19,8 @@ Route::get('/', function () {
 Route::get('/about/{cat?}', function ($cat = null) {
     return view('about', ['cat' => $cat]);
 });
+Route::get('/ajouterProduit', function () {
+    return view('ajouterProduit');
+});
+
 
