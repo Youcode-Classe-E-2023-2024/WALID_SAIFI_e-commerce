@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\produitController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +21,6 @@ Route::get('/', function () {
 Route::get('/about/{cat?}', function ($cat = null) {
     return view('about', ['cat' => $cat]);
 });
-Route::get('/ajouterProduit', function () {
-    return view('ajouterProduit');
-});
+Route::get('/produit',[produitController::class,'index'])->name('walid');
 
 
