@@ -21,6 +21,8 @@ Route::get('/', function () {
 Route::get('/about/{cat?}', function ($cat = null) {
     return view('about', ['cat' => $cat]);
 });
-Route::get('/produit',[produitController::class,'index'])->name('walid');
+Route::get('/produit',[produitController::class,'index'])->name('produit.index');
+Route::get('/produit/create',[produitController::class,'create'])->name('produit.create');
+Route::post('/produit',[produitController::class,'store'])->name('produit.store');
 
 
