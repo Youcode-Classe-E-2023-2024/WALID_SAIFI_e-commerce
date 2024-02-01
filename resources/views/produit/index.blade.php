@@ -210,7 +210,7 @@
                             <p class="card-text">telephone : {{$pro->telephone}}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Voir</a>
+                                    <a href="{{route('produit.voir',['produit' => $pro])}}" class="btn btn-sm btn-outline-secondary">Voir</a>
                                     <a href="{{route('produit.edit',['produit' => $pro])}}" class="btn btn-sm btn-outline-secondary">Edit</a>
                                     <form method="post" action="{{route('produit.destroy',['produit' => $pro])}}">
                                            @csrf
