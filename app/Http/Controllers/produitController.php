@@ -51,4 +51,7 @@ class produitController extends Controller
           $produit->delete();
         return redirect(route('produit.index'));
     }
+    public  function voir(produit $produit){
+        return view('produit.voir', ['produit' => $produit]);
+    }
 }
