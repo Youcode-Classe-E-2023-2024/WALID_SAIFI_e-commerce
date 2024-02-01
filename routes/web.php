@@ -18,13 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/about/{cat?}', function ($cat = null) {
-    return view('about', ['cat' => $cat]);
-});
+
 Route::get('/produit',[produitController::class,'index'])->name('produit.index');
 Route::get('/produit/create',[produitController::class,'create'])->name('produit.create');
 Route::post('/produit',[produitController::class,'store'])->name('produit.store');
 Route::get('/produit/{produit}/edit',[produitController::class,'edit'])->name('produit.edit');
-Route::get('/produit/{produit}/update',[produitController::class,'update'])->name('produit.update');
+Route::put('/produit/{produit}/update',[produitController::class,'update'])->name('produit.update');
+Route::delete('/produit/{produit}/destroy',[produitController::class,'destroy'])->name('produit.destroy');
 
 
