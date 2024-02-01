@@ -31,5 +31,5 @@ Route::post('/produit',[produitController::class,'store'])->name('produit.store'
 Route::get('/produit/{produit}/edit',[produitController::class,'edit'])->name('produit.edit');
 Route::put('/produit/{produit}/update',[produitController::class,'update'])->name('produit.update');
 Route::delete('/produit/{produit}/destroy',[produitController::class,'destroy'])->name('produit.destroy');
-
+Route::get('/produit/{produit}/voir',[produitController::class,'voir'])->name('produit.voir');
 
