@@ -42,8 +42,12 @@ class produitController extends Controller
             'telephone' => 'required',
             'email' => 'required | email'
         ]);
+
         $produit->update($data);
         return redirect(route('produit.index'));
 
+    }
+    public  function destroy(){
+        
     }
 }
