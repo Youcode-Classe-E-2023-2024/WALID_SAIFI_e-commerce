@@ -24,6 +24,7 @@ Route::get('/about/{cat?}', function ($cat = null) {
 Route::get('/produit',[produitController::class,'index'])->name('produit.index');
 Route::get('/produit/create',[produitController::class,'create'])->name('produit.create');
 Route::post('/produit',[produitController::class,'store'])->name('produit.store');
-Route::post('/produit/{produit}/edit',[produitController::class,'edit'])->name('produit.edit');
+Route::get('/produit/{produit}/edit',[produitController::class,'edit'])->name('produit.edit');
+Route::get('/produit/{produit}/update',[produitController::class,'update'])->name('produit.update');
 
 
