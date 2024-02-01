@@ -30,6 +30,20 @@ class produitController extends Controller
 
     }
     public function edit(produit $produit){
+       // dd($produit);
+        return view('produit.edit', ['produit' => $produit]);
+
+    }
+    public  function  update(produit $produit ,Request $request){
+        $data = $request->validate([
+            'titre' => 'required ',
+            'description' => 'required',
+            'prix' => 'required',
+            'telephone' => 'required',
+            'email' => 'required | email'
+        ]);
+        $produit->update($data);
+        return redirect(route('produit.index'));
 
     }
 }
