@@ -18,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/sinup', function () {
+    return view('sinup');
+});
 
 Route::get('/produit',[produitController::class,'index'])->name('produit.index');
 Route::get('/produit/create',[produitController::class,'create'])->name('produit.create');
