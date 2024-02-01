@@ -18,8 +18,9 @@
                     <h2 class="text-center">Modifier Produit</h2>
                 </div>
                 <div class="card-body">
-                    <form class="form" method="post" action="{{route('produit.update',['produit'] => $produit)}}">
-                        @csrf
+                    <form class="form" method="post" action="{{ route('produit.update', ['produit' => $produit]) }}">
+
+                    @csrf
                         @method('put')
                         <div class="form-group">
                             <label for="titre">Titre de l'Annonce</label>
