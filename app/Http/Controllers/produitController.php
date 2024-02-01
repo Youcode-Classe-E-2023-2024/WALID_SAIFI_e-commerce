@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class produitController extends Controller
 {
     public  function index(){
-             return view('produit.index');
+        $produit = produit::all();
+        return  view('produit.index',['produit' => $produit]);
     }
     public  function create(){
         return view( 'produit.create');
@@ -26,6 +27,9 @@ class produitController extends Controller
 
               $newProduit = produit::create($data);
               return redirect(route('produit.index'));
+
+    }
+    public function edit(produit $produit){
 
     }
 }
