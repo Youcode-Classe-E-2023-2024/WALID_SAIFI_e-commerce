@@ -214,7 +214,7 @@
                                 <div class="btn-group">
                                     <a href="#" class="btn btn-sm btn-outline-secondary">Voir</a>
                                     <a href="{{route('produit.edit',['produit' => $pro])}}" class="btn btn-sm btn-outline-secondary">Edit</a>
-                                    <form method="post" action="">
+                                    <form method="post" action="{{route('produit.destroy',['produit' => $pro])}}">
                                            @csrf
                                            @method('delete')
                                         <button type="submit" class="btn btn-sm btn-outline-secondary">Supprimer</button>
