@@ -172,7 +172,7 @@
     </div>
     <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container">
-            <a href="#" class="navbar-brand d-flex align-items-center">
+            <a href="{{route('produit.index')}}" class="navbar-brand d-flex align-items-center">
 
                 <strong>Produit</strong>
             </a>
@@ -225,15 +225,19 @@
                         </div>
                     </div>
                 </div>
+
                 @endforeach
 
 
+                    {{ $produit->links() }}
 
 
 
 
 
-                </div>
+
+
+            </div>
             </div>
         </div>
     </div>
