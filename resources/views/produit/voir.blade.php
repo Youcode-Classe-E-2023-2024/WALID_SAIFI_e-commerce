@@ -103,7 +103,7 @@
             <!-- Column div with medium width for responsiveness -->
 
             <div class="card bg-light">
-              
+
 
                 <div class="card-header bg-primary text-white">
 
@@ -113,7 +113,7 @@
                 <div class="card-body">
 
 
-                    <h2 class="text-primary">titre: {{$produit->titre}}</h2>
+                    <h2 class="text-primary">Titre de Produit: {{$produit->titre}}</h2>
 
 
                     <p class="text-muted">Description: {{$produit->description}}</p>
